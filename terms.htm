@@ -3,114 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnrichPro Legal Documents</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Terms of Use - Enrich Pro</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Custom styles for better readability and structure */
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #00d4ff;
+            --accent-color: #ff6b6b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light gray background */
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-color) 0%, #e2e8f0 100%);
+            min-height: 100vh;
         }
-        h1, h2, h3 {
-            font-weight: 700;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        /* Style for anchors to offset fixed header */
-        .document-anchor {
-            display: block;
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
             position: relative;
-            top: -80px; /* Offset the height of the fixed header */
-            visibility: hidden;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.5;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+    height: 4rem;  /* Relative to font size */
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+        .title-section {
+            text-align: left;
+        }
+
+        .title-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+            line-height: 1;
+        }
+
+        .title-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        .contact-email {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-email a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .contact-email a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .terms-content {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            margin: -60px auto 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .effective-date {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #fcd34d;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--primary-color);
+            color: white;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+            color: white;
+        }
+
+        footer strong {
+            color: var(--secondary-color);
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: row;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logo {
+                height: 50px;
+            }
+            
+            .title-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .terms-content {
+                padding: 20px;
+                margin: -40px auto 20px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Sticky Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-extrabold text-blue-600">EnrichPro Legal</h1>
-            <nav class="space-x-4 text-sm font-medium">
-                <a href="#privacy-policy" class="text-gray-600 hover:text-blue-700 transition duration-150">Privacy Policy</a>
-                <a href="#terms-of-use" class="text-gray-600 hover:text-blue-700 transition duration-150">Terms of Use</a>
-            </nav>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="app_icon.png" alt="Enrich Pro Logo" class="logo">
+                <div class="title-section">
+                    <h1>Enrich Pro</h1>
+                    <p>Terms of Use</p>
+                </div>
+            </div>
+            <div class="contact-email">
+                <a href="mailto:enrichpro@outlook.com"><i class="fas fa-envelope"></i> Contact: enrichpro@outlook.com</a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-
-<section id="terms-of-use" class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
-            <span class="document-anchor" id="terms-of-use-top"></span>
-            <h2 class="text-3xl text-gray-800 mb-6 border-b pb-2">Terms of Use for EnrichPro</h2>
-
-            <p class="text-sm text-gray-500 mb-4"><strong>Effective Date:</strong> November 20, 2025</p>
-
-            <p class="text-gray-600 mb-6">Welcome to **EnrichPro**. Please read these Terms of Use ("Terms") carefully before using the software application provided by EnrichPro Software ("We," "Us," or "Our"). By purchasing, downloading, or using EnrichPro, you agree to be bound by these Terms.</p>
-
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3"><strong>1. Limited Software License</strong></h3>
-
-            <h4 class="text-xl font-semibold mt-4 mb-2">1.1 Grant of License</h4>
-            <p class="text-gray-600 mb-4">We grant you a limited, non-exclusive, non-transferable, and revocable license to install and use the EnrichPro application for your internal business or personal use, subject to these Terms. You are purchasing a <strong>license to use</strong> the software, not ownership of the software itself.</p>
-
-            <h4 class="text-xl font-semibold mt-4 mb-2">1.2 Usage Credits and Limitations</h4>
-            <p class="text-gray-600 mb-4">The scraping functionality of EnrichPro is strictly usage-based. The license grants you the right to run the application, but all scraping activities (URL processing) require the purchase and consumption of separate usage credits. Once the credit allotment for a purchased tier is consumed, the scraping functionality will cease until a new credit package is purchased.</p>
+    <div class="container">
+        <div class="terms-content">
+            <h2><i class="fas fa-balance-scale"></i> Terms of Use</h2>
             
-            <h4 class="text-xl font-semibold mt-4 mb-2">1.3 Restrictions</h4>
-            <p class="text-gray-600 mb-4">You may not: (a) modify, translate, reverse engineer, or create derivative works of EnrichPro; (b) redistribute, sell, rent, lease, or sub-license the software; or (c) use the software in any way that violates any applicable local, national, or international law.</p>
+            <p class="effective-date"><strong>Effective Date:</strong> November 20, 2025</p>
 
+            <div class="warning-box">
+                <p><strong>⚠️ IMPORTANT:</strong> By using Enrich Pro, you acknowledge and agree to comply with ALL applicable laws worldwide. You are solely responsible for ensuring your use of this software complies with local regulations.</p>
+            </div>
 
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">2. User Responsibilities and Compliance (Mandatory for Scraping Tools)</h3>
-            <p class="text-gray-600 mb-4">You acknowledge and agree that you are solely responsible for your use of EnrichPro, including, but not limited to:</p>
-
-            <h4 class="text-xl font-semibold mt-4 mb-2">2.1 Legal Compliance</h4>
-            <p class="text-gray-600 mb-4">You are responsible for ensuring that your use of EnrichPro, including the selection of target URLs and the subsequent use of any collected data (emails, associated metadata), complies with **all applicable laws, regulations, and third-party terms**, including:</p>
-            <ul class="list-disc list-inside ml-4 text-gray-600 space-y-2 mb-6">
-                <li>Data protection laws (e.g., GDPR, CCPA).</li>
-                <li>Anti-spam laws (e.g., CAN-SPAM Act).</li>
-                <li>The terms of service or robots.txt policies of the websites you choose to scrape.</li>
+            <h3><i class="fas fa-handshake"></i> 1. License Grant</h3>
+            <p>Enrich Pro grants you a non-exclusive, non-transferable license to use the software according to your purchased plan:</p>
+            <ul>
+                <li><strong>Single Device:</strong> One installation per license</li>
+                <li><strong>URL Limits:</strong> Subject to your subscription plan (1,000, 5,000, or 15,000 URLs)</li>
+                <li><strong>Lifetime Usage:</strong> One-time payment for permanent access to the purchased version</li>
             </ul>
 
-            <h4 class="text-xl font-semibold mt-4 mb-2">2.2 Data Integrity</h4>
-            <p class="text-gray-600 mb-4">You acknowledge that you control the list of URLs uploaded to the application. We take no responsibility for the quality, accuracy, legality, or appropriateness of the data you choose to scrape or how you use that data.</p>
-
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">3. Application Functionality and Limitations</h3>
-
-            <h4 class="text-xl font-semibold mt-4 mb-2">3.1 Strict robots.txt Adherence</h4>
-            <p class="text-gray-600 mb-4">EnrichPro is designed to strictly adhere to the <code class="bg-gray-100 p-1 rounded">robots.txt</code> protocol of every website it accesses. However, you acknowledge that:</p>
-            <ul class="list-disc list-inside ml-4 text-gray-600 space-y-2 mb-6">
-                <li><code class="bg-gray-100 p-1 rounded">robots.txt</code> is only one indicator of a website's policy.</li>
-                <li>Strict adherence does not guarantee that your scraping activities will be permitted or unnoticed by the target website.</li>
-                <li>We make no warranty or guarantee that using EnrichPro will prevent a website from blocking, banning, or otherwise penalizing your access.</li>
+            <h3><i class="fas fa-ban"></i> 2. Prohibited Activities</h3>
+            <p><strong>STRICTLY FORBIDDEN uses include:</strong></p>
+            <ul>
+                <li>❌ Spam generation or unsolicited email campaigns</li>
+                <li>❌ Phishing, fraud, or malicious activities</li>
+                <li>❌ Harassment, stalking, or doxxing</li>
+                <li>❌ Scraping protected social media platforms</li>
+                <li>❌ Accessing password-protected or paid content</li>
+                <li>❌ Violating any website's terms of service</li>
+                <li>❌ Bulk collection without legitimate purpose</li>
             </ul>
 
-            <h4 class="text-xl font-semibold mt-4 mb-2">3.2 Geolocation Tagging</h4>
-            <p class="text-gray-600 mb-4">While the application provides internal geolocation tagging for your convenience, this feature is based on public IP lookup data and is provided "as is" without any guarantee of accuracy.</p>
+            <h3><i class="fas fa-shield-alt"></i> 3. Compliance Features</h3>
+            <p>Enrich Pro includes built-in features to help maintain ethical operation:</p>
+            <ul>
+                <li><strong>Robots.txt Respect:</strong> Automatic compliance with website scraping policies</li>
+                <li><strong>Rate Limiting:</strong> Built-in delays between requests to prevent server overload</li>
+                <li><strong>Domain Limits:</strong> Maximum 50 pages per domain to prevent overloading</li>
+                <li><strong>Concurrency Controls:</strong> Limited simultaneous requests</li>
+            </ul>
 
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">4. Intellectual Property Rights</h3>
-            <p class="text-gray-600 mb-4">The EnrichPro application, including all source code, design, features, and content, is and shall remain the exclusive property of EnrichPro Software and is protected by copyright and other intellectual property laws.</p>
+            <h3><i class="fas fa-globe"></i> 4. Legal Compliance</h3>
+            <p>You are solely responsible for complying with applicable laws including but not limited to:</p>
+            <ul>
+                <li>GDPR (European Union)</li>
+                <li>CCPA/CPRA (California)</li>
+                <li>CAN-SPAM Act</li>
+                <li>Computer Fraud and Abuse Act</li>
+                <li>Other international data protection regulations</li>
+            </ul>
 
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">5. Disclaimer of Warranties</h3>
-            <p class="text-gray-600 font-bold mb-4">ENRICHPRO IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE EXPRESSLY DISCLAIM ALL WARRANTIES, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS.</p>
+            <h3><i class="fas fa-download"></i> 5. Data Handling</h3>
+            <p>The software operates with the following data principles:</p>
+            <ul>
+                <li><strong>Local Processing:</strong> All data processing occurs on your local machine</li>
+                <li><strong>File-Based Input:</strong> URLs must be provided via .txt or .csv files</li>
+                <li><strong>CSV Export:</strong> Results are exported in CSV format with comprehensive metadata</li>
+                <li><strong>No Data Transmission:</strong> Scraped data never leaves your computer</li>
+            </ul>
 
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">6. Limitation of Liability</h3>
-            <p class="text-gray-600 mb-4">In no event shall EnrichPro Software, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from: (a) your access to or use of or inability to access or use the software; (b) any conduct or content of any third party on the software; (c) any data gathered or actions taken by you using the software.</p>
+            <h3><i class="fas fa-gavel"></i> 6. Disclaimer & Liability</h3>
+            <p><strong>"AS IS" BASIS:</strong> No warranties of merchantability or fitness for purpose. Use at your own risk.</p>
+            <p><strong>No Liability:</strong> We are not responsible for legal consequences, damages, or data loss resulting from your use.</p>
+            <p><strong>Indemnification:</strong> You agree to indemnify us against all claims arising from your activities.</p>
 
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">7. Governing Law</h3>
-            <p class="text-gray-600 mb-4">These Terms shall be governed and construed in accordance with the laws of The State of Delaware, USA, without regard to its conflict of law provisions.</p>
+            <h3><i class="fas fa-key"></i> 7. License Management</h3>
+            <ul>
+                <li>Licenses are tied to individual users and cannot be transferred</li>
+                <li>URL usage is tracked locally and cannot be reset</li>
+                <li>Upgrades to higher tiers are available at any time</li>
+                <li>No refunds are provided for used URL quotas</li>
+            </ul>
 
-            <h3 class="text-2xl text-blue-600 mt-6 mb-3">8. Changes to Terms</h3>
-            <p class="text-gray-600 mb-4">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will update the "Effective Date" at the top of this document to reflect the change. Your continued use of the application after any such changes constitutes your acceptance of the new Terms of Use.</p>
-        </section>
+            <h3><i class="fas fa-exclamation-circle"></i> 8. Termination</h3>
+            <p>We reserve the right to terminate licenses for violations of these terms. Technical measures may be implemented to prevent abusive usage.</p>
 
-    </main>
+            <div class="warning-box">
+                <p><strong>⚠️ ACKNOWLEDGMENT:</strong> By using Enrich Pro, you certify that you understand these terms and accept full responsibility for legal compliance. When in doubt, consult legal counsel before scraping.</p>
+            </div>
 
-    <!-- Simple Footer -->
-    <footer class="bg-gray-200 text-center py-4 text-sm text-gray-600">
-        &copy; 2025 EnrichPro Software. All rights reserved. | <a href="#privacy-policy" class="hover:underline">Privacy</a> | <a href="#terms-of-use" class="hover:underline">Terms</a>
+            <p class="effective-date"><em>If you cannot comply with these terms, uninstall immediately. Questions? Contact legal counsel.</em></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Enrich Pro. All rights reserved.</p>
+        <p><strong>Built for ethical web research and compliance.</strong></p>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:enrichpro@outlook.com">Support</a>
+        </div>
     </footer>
-
 </body>
-
 </html>
-
