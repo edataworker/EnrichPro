@@ -74,51 +74,48 @@
         }
 
         .logo {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-        }
+    max-width: 340px; /* Logo width */
+    width: 100%;
+    height: auto;
+    background: transparent;
+    margin: 10 auto 10px; /* Added 5px bottom margin for space */
+    display: block;
+}
 
-        .title-section {
-            text-align: left;
-        }
+.tagline-section {
+    margin: 0;
+    width: 330px; /* Changed to 340px to match logo */
+    max-width: 100%;
+}
 
-        .title-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0;
-            position: relative;
-            z-index: 1;
-            line-height: 1;
-        }
-
-        .title-section p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-            margin-top: 2px;
-            line-height: 1.2;
-        }
-
+.tagline-section p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.95;
+    margin: 0;
+    line-height: 1.0;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    text-align: center;
+    white-space: nowrap; /* Keeps text on one line */
+}
         .contact-email {
-            text-align: center;
-            margin: 20px 0;
-            position: relative;
-            z-index: 1;
-        }
+    margin: 5px 0 13px; /* Added bottom margin: top 5px, bottom 8px */
+    text-align: center;
+}
 
-        .contact-email a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.2);
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-        }
+.contact-email a {
+    color: #1a365d;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    transition: var(--transition);
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
+}
 
         .contact-email a:hover {
             background: rgba(255,255,255,0.3);
@@ -317,4 +314,5 @@
     </footer>
 </body>
 </html>
+
 
