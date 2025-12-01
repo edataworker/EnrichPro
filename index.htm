@@ -100,7 +100,7 @@
     width: 100%;
     height: auto;
     background: transparent;
-    margin: 0 auto 10px; /* Added 5px bottom margin for space */
+    margin: 10 auto 10px; /* Added 5px bottom margin for space */
     display: block;
 }
 
@@ -121,22 +121,23 @@
     white-space: nowrap; /* Keeps text on one line */
 }
         .contact-email {
-            margin-top: 4px; /* Minimal margin */
-            text-align: center;
-        }
-        .contact-email a {
-            color: #1a365d;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 4px 12px; /* Smaller padding */
-            background: rgba(255, 255, 255, 0.95); /* More opaque */
-            border-radius: 8px;
-            transition: var(--transition);
-            display: inline-block;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-            font-size: 0.85rem; /* Smaller font */
-        }
+    margin: 5px 0 8px; /* Added bottom margin: top 5px, bottom 8px */
+    text-align: center;
+}
+
+.contact-email a {
+    color: #1a365d;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    transition: var(--transition);
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
+}
         .contact-email a:hover {
             background: rgba(255, 255, 255, 1);
             transform: translateY(-1px);
@@ -561,6 +562,7 @@
     </script>
 </body>
 </html>
+
 
 
 
