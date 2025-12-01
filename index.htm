@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Enrich Pro - Contact Discovery Software | Find Verified Business Emails Fast</title>
-    <meta name="description" content="Enrich Pro is a powerful Windows desktop tool that discovers real business contacts from any website. Smart crawling, geo-location, proxy support, quality scoring & clean CSV export. One-time purchase from $12.">
+    <title>Enrich Pro - Data Enrichment Software | Find Verified Business Emails Fast</title>
+    <meta name="description" content="Enrich Pro is a powerful Windows desktop tool that discovers real business leads from any website. Smart crawling, geo-location, proxy support, quality scoring & clean CSV export. One-time purchase from $12.">
     <meta name="author" content="Enrich Pro">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://edataworker.github.io/EnrichPro/help.htm">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Enrich Pro - Contact Discovery Software | Find Business Emails">
+    <meta property="og:title" content="Enrich Pro - Data Enrichment Software | Find Business Emails">
     <meta property="og:description" content="Discover verified business emails from websites in seconds. Smart filtering, geo-targeting, proxy support & CSV export. One-time license from $12.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/EnrichPro/EnrichProLogo.png">
@@ -27,7 +27,7 @@
       "name": "Enrich Pro",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Windows",
-      "description": "Advanced contact discovery desktop software for finding verified business emails from websites.",
+      "description": "Advanced data enrichment desktop software for finding verified business leads from websites.",
       "offers": {
         "@type": "Offer",
         "price": "12",
@@ -95,25 +95,31 @@
             z-index: 1; 
             padding: 2px 0; /* Minimal padding */
         }
-        .logo { 
-            width: 400px; /* Fixed smaller width */
-            height: 233px; /* Maintain 960:560 ratio (400 * 560/960 = 233) */
-            background: transparent; 
-            object-fit: contain; /* Ensures logo fits within dimensions */
-            margin: 0;
-        }
+        .logo {
+    max-width: 320px; /* Reduced from 380px */
+    width: 100%;
+    height: auto;
+    background: transparent;
+    margin: 0 auto;
+    display: block;
+}
+        
         .tagline-section {
-            text-align: center;
-            margin: 3px 0 5px; /* Minimal margins */
-        }
-        .tagline-section p {
-            font-size: 1rem; /* Smaller font */
-            font-weight: 500;
-            opacity: 0.95;
-            margin: 0;
-            line-height: 1.1; /* Tight line height */
-            text-shadow: 0 1px 1px rgba(0,0,0,0.3);
-        }
+    margin: 0;
+    width: 320px; /* Match logo width */
+    max-width: 100%;
+}
+
+.tagline-section p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.95;
+    margin: 0;
+    line-height: 1.0;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    text-align: center;
+    white-space: nowrap; /* Keeps text on one line */
+}
         .contact-email {
             margin-top: 4px; /* Minimal margin */
             text-align: center;
@@ -555,3 +561,4 @@
     </script>
 </body>
 </html>
+
